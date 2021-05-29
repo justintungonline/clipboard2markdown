@@ -14,12 +14,27 @@
                 font-size: 22px;
                 font-style: italic;
             }
+            a:link {
+                color: turquoise;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: pink;
+                background-color: transparent;
+                text-decoration: none;
+            }     
+            code {
+                background-color: darkslategray;
+            }                   
             body {
-                background-attachment: fixed;
+                /* background-attachment: fixed;
                 background-image: url('background.svg');
                 background-position: right 10% bottom 20%;
                 background-repeat: no-repeat;
-                background-size: 20em;
+                background-size: 20em; */
+                background-color: black;
+                color: white;                
                 margin-bottom: 10%;
                 margin-top: 5%;
             }
@@ -59,7 +74,16 @@
             <div contenteditable="true" id="pastebin"></div>
             <section class="hidden" id="wrapper">
                 <textarea id="output"></textarea>
+                <p>
+                    <a onclick="reset()">Reset</button>
+                </p>                
             </section>
         </div>
     </body>
+    <script>
+        function reset() {
+                info.classList.remove('hidden');
+                wrapper.classList.add('hidden');
+        }
+        </script>    
 </html>
